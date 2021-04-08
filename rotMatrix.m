@@ -11,7 +11,7 @@ I = cosd(e_y)*cosd(e_x)
 rot_1 = [A B C;
          D E F;
          G H I]
- rotM = rot_1;
+rotM = rot_1;
 
  
  
