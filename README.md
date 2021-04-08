@@ -1,4 +1,4 @@
 # BME 301: ACL Technology
-Team: Ruby Salbego, Kristen Schill, Katherine Konieczka, Arrington Polman, Jacob Hawig  
+Team: Ruby Salbego, Kristen Schill, Katherine Konieczka, Arrington Polman, Jacob Hawig<br/>
 ## Project Description:
-This semester we are working on ... 
+This semester we are working on ... <br/>
