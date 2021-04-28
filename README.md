@@ -1,4 +1,4 @@
-# BME 301: WEARABLE TECHNOLOGY TO PREVENT ACL INJURIES AND MAXIMIZE PERFORMANCE
+# BME 301: Wearable Technology To Prevent ACL Injuries And Maximize Performance
 Team: Ruby Salbego, Kristen Schill, Katherine Konieczka, Arrington Polman, Jacob Hawig<br/>
 
 ## Project Overview:
