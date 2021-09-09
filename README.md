@@ -1,8 +1,8 @@
-# BME 301: Wearable Technology To Prevent ACL Injuries And Maximize Performance
+# BME 400: Wearable Technology To Prevent ACL Injuries And Maximize Performance
 Team: Ruby Salbego, Kristen Schill, Katherine Konieczka, Arrington Polman, Jacob Hawig<br/>
 University: University of Wisconsin-Madison School of Engineering<br/>
-Class: BME 301 - BME Design<br/>
-Semester: Spring 2021<br/>
+Class: BME 400 - BME Design<br/>
+Semester: Fall 2021<br/>
 [Project Website](https://bmedesign.engr.wisc.edu/projects/s21/wearable_tech)
 
 ## Project Overview:
