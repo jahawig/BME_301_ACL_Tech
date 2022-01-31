@@ -1,19 +1,13 @@
 /******************************************************************************
- * @file: functions.c
- *
- * WISC NETID: hawig@wisc.edu
- * CANVAS USERNAME: hawig
- * WISC ID NUMBER: 9078102226
- * OTHER COMMENTS FOR THE GRADER (OPTIONAL)
- *
- * @creator: Jacob Hawig (hawig@wisc.edu)
- * @modified: SUBMISSION DATE
+ * Username/Email/Password Checking
+ * Written by Jacob Hawig
  *****************************************************************************/
  
 #include <stdio.h>
-#include "functions.h"
+#include "login_validation.h"
 
-// Some macros that may be useful to you 
+// Preset values that can easily be changed here up top
+// Each of these variables has a descriptive name to help understand where it will impact.
 #define MAX_USERNAME_LEN    32
 #define MAX_EMAIL_LEN       32
 #define MAX_DOMAIN_LEN      64
@@ -21,19 +15,9 @@
 #define MAX_PASSWORD_LEN    16
 #define NEW_LINE_CHAR       10
 
-// Set this to 1 to enable dbgprintf statements, make sure to set it back to 0 
-// before submitting!
-#define DEBUG               0 
-#define dbgprintf(...)      if (DEBUG) { printf(__VA_ARGS__); }
-
 /******************************************************************************
  * Helper functions
  *****************************************************************************/
-
-// ADD ANY HELPER FUNCTIONS YOU MIGHT WRITE HERE 
-// Examples: IsLetter, IsDigit, Length, Find...
-
-
 
 int IsLetter(char test_character){
 	int ASCII_val;
@@ -118,11 +102,6 @@ int top_level(char string[],int string_len){
 	
 }
 
-// Helper method for length of ___ can count the number of characters
-// and then multiply that count by 2 to get the space that is would take up
-// Have to think about this some more but I think it would work
-//
-
 /******************************************************************************
  * Verification functions
  *****************************************************************************/
@@ -201,8 +180,6 @@ int Verify_Username(char user[], size_t len) {
  * @return 1 if valid, 0 if not
  */
 int Verify_Email(char email[], size_t len) {
-
-    /* BEGIN MODIFYING CODE HERE */
 	// TESTED
 	if(email[0] == '@'){
 		printf(ERROR_04_EMAIL_MISSING_NAME);  // example @domain.com
@@ -324,9 +301,6 @@ int Verify_Email(char email[], size_t len) {
 		printf(ERROR_13_TOP_LEVEL_DOMAIN_INVALID);
 		return 0;
 	}
-    
-    /* END MODIFYING CODE HERE */
-    
     printf(SUCCESS_2_EMAIL);
     return 1;
 }
@@ -346,8 +320,7 @@ int Verify_Email(char email[], size_t len) {
  * @return 1 if valid, 0 if not
  */
 int Verify_Password(char pwd[], size_t len) {
-
-    /* BEGIN MODIFYING CODE HERE */
+	
 	int pwd_length = lengthOf(pwd,len);
 	
 	// Checking for Space Characters
@@ -393,7 +366,6 @@ int Verify_Password(char pwd[], size_t len) {
 		printf(ERROR_18_PWD_MIN_LOWER_INVALID);
 		return 0;
 	}
-    /* END MODIFYING CODE HERE */
 
     return 1;
 }
@@ -407,8 +379,6 @@ int Verify_Password(char pwd[], size_t len) {
  * @return 1 if valid, 0 if not
  */
 int Verify_Passwords_Match(char pwd1[], size_t len1, char pwd2[], size_t len2) {
-
-    /* BEGIN MODIFYING CODE HERE */
 	
 	// First checking that the two passwords are the same length
 	int length_1 = lengthOf(pwd1,len1);
@@ -426,7 +396,6 @@ int Verify_Passwords_Match(char pwd1[], size_t len1, char pwd2[], size_t len2) {
 			return 0;
 		}
 	}
-    /* END MODIFYING CODE HERE */
 
     printf(SUCCESS_3_PASSWORDS);
     return 1;
@@ -446,13 +415,13 @@ int Verify_Passwords_Match(char pwd1[], size_t len1, char pwd2[], size_t len2) {
 void Get_User_Data(char *message, char *data, const int MAX_LENGTH) {
     printf("%s", message);
     fgets(data, MAX_LENGTH, stdin);
-    /* BEGIN MODIFYING CODE HERE */
+    
 	for(int i= 0; i < MAX_LENGTH; i++){
 		// In here check for new line character and replace it with the /0
 		if(data[i] == '\n'){
 			data[i] = '\0';
 		}
 	}
-    /* END MODIFYING CODE HERE */
+    
     return;
 }
